@@ -1,0 +1,18 @@
+{
+  "id": "9156132980313850894",
+  "name": "0067E000006LIkb-Quote",
+  "notes": "Alpha Computers Store 2nd quote",
+  "relationId": "CMMnA03Z2FCjEseNke",
+  "distributionChannel": "Tele Sale",
+  "status": "Entering",
+  "statusChangeReason": "",
+  "createdBy": "VIME",
+  "createdWhen": "2020-01-07 19:04:54",
+  "modifiedWhen": "2020-01-07 19:06:16",
+  "url": "/roe/roe.jsp?dcid=9143605010013240686&cid=9156132980313850889&soid=9156132980313850894",
+  "customer":    {
+    "id": "27ou9ARzvIaBlhzlB4",
+    "name": "Alpha Computers",
+    "category": "B2B"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "context": {
+    "orderID": "32005"
+  },
+  "orders" : [
+    {
+      "lineID": "40163772",
+      "relationID": "9156191801713282333",
+      "products" : [
+        {
+          "relationID": "9156191801713282333FTTH19B",
+          "code" : "FTTH19B",
+          "action" : "add",
+          "prices" : [ {
+            "specification" : "monthlyCharge",
+            "value" : 0.0,
+            "valueInclVAT" : 0.0
+          } ]
+        }, {
+          "relationID": "9156191801713282333FTTHINET01",
+          "code" : "FTTHINET01",
+          "action" : "add",
+          "prices" : [ {
+            "specification" : "monthlyCharge",
+            "value" : 0.0,
+            "valueInclVAT" : 0.0
+          } ]
+        }, {
+          "relationID": "9156191801713282333FTTHBW05",
+          "code" : "FTTHBW05",
+          "action" : "add",
+          "prices" : [ {
+            "specification" : "monthlyCharge",
+            "value" : 39.0,
+            "valueInclVAT" : 47.19
+          } ],
+          "discounts" : [ {
+            "code" : "FTTHBW05-39",
+            "name" : "FTTHBW05-39",
+            "variantCode" : "FTTHBW05-39",
+            "variantName" : "-39 korting Internet Basis",
+            "targetPrice" : "monthlyCharge",
+            "amount" : -39.0,
+            "amountInclVAT" : -47.19
+          } ]
+        }, {
+          "relationID": "9156191801713282333FTTHSLA01",
+          "code" : "FTTHSLA01",
+          "action" : "add",
+          "prices" : [ {
+            "specification" : "monthlyCharge",
+            "value" : 0.0,
+            "valueInclVAT" : 0.0
+          } ]
+        }, {
+          "relationID": "9156191801713282333FTTHNLS06",
+          "code" : "FTTHNLS06",
+          "action" : "add",
+          "prices" : [ {
+            "specification" : "monthlyCharge",
+            "value" : 0.0,
+            "valueInclVAT" : 0.0
+          } ]
+        }, {
+          "relationID": "9156191801713282333FIXINST01",
+          "code" : "FIXINST01",
+          "action" : "add",
+          "prices" : [ {
+            "specification" : "activationCharge",
+            "value" : 80.0,
+            "valueInclVAT" : 96.8
+          } ],
+          "discounts" : [ {
+            "code" : "FIXINST01-80",
+            "name" : "FIXINST01-80",
+            "variantCode" : "FIXINST01-80",
+            "variantName" : "-80 korting Installatie monteur",
+            "targetPrice" : "activationCharge",
+            "amount" : -80.0,
+            "amountInclVAT" : -96.8
+          } ]
+        }, {
+          "relationID": "9156191801713282333FTTHNTU01",
+          "code" : "FTTHNTU01",
+          "action" : "add",
+          "prices" : [ {
+            "specification" : "monthlyCharge",
+            "value" : 0.0,
+            "valueInclVAT" : 0.0
+          } ]
+        }, {
+          "relationID": "9156191801713282333FTTHGW01",
+          "code" : "FTTHGW01",
+          "action" : "add",
+          "prices" : [ {
+            "specification" : "monthlyCharge",
+            "value" : 0.0,
+            "valueInclVAT" : 0.0
+          } ]
+        } ],
+      "prices" : [ {
+        "kind" : "charge",
+        "specification" : "totalMonthlyCharge",
+        "value" : 0.0,
+        "valueInclVAT" : 0.0
+      }, {
+        "kind" : "charge",
+        "specification" : "totalActivationCharge",
+        "value" : 0.0,
+        "valueInclVAT" : 0.0
+      }, {
+        "kind" : "price",
+        "specification" : "totalOneTimeCost",
+        "value" : 0.0,
+        "valueInclVAT" : 0.0
+      }, {
+        "kind" : "evaluation",
+        "specification" : "totalLifetimeValue",
+        "value" : 0.0,
+        "valueInclVAT" : 0.0
+      }, {
+        "kind" : "vat",
+        "specification" : "totalVATReturn",
+        "value" : 0.0,
+        "valueInclVAT" : 0.0
+      } ]
+    } ]
+}

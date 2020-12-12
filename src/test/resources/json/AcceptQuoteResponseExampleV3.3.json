@@ -1,0 +1,71 @@
+{
+  "context": {"orderID": "32929"},
+  "orders": [   {
+    "lineID": "32928",
+    "relationID": "9156270497713821762",
+    "products":       [
+      {
+        "productRelationID": "9156270497713821762FOR03",
+        "code": "FOR03",
+        "action": "Add",
+        "prices": [            {
+          "kind": "charge",
+          "specification": "monthlyCharge",
+          "value": 0,
+          "valueInclVAT": 0
+        }],
+        "discounts": [            {
+          "code": "VIMErate",
+          "name": "VIME rateplan",
+          "variantCode": "VIMErate",
+          "variantName": "-7.00 korting @Work",
+          "targetPrice": "monthlyCharge",
+          "amount": -7,
+          "amountInclVAT": -8.45
+        }]
+      },
+      {
+        "productRelationID": "9156270497713821762TFB14",
+        "code": "TFB14",
+        "action": "Add",
+        "prices": [            {
+          "kind": "charge",
+          "specification": "monthlyCharge",
+          "value": 60,
+          "valueInclVAT": 72.6
+        }]
+      },
+      {
+        "productRelationID": "9156270497713821762AANSK",
+        "code": "AANSK",
+        "action": "Add",
+        "prices": [            {
+          "kind": "charge",
+          "specification": "activationCharge",
+          "value": 44.12,
+          "valueInclVAT": 53.39
+        }]
+      }
+    ],
+    "totalPrices":       [
+      {
+        "kind": "price",
+        "specification": "totalOneTimeCost",
+        "value": 0,
+        "valueInclVAT": 0
+      },
+      {
+        "kind": "charge",
+        "specification": "totalActivationCharge",
+        "value": 44.12,
+        "valueInclVAT": 53.39
+      },
+      {
+        "kind": "charge",
+        "specification": "totalMonthlyCharge",
+        "value": 60,
+        "valueInclVAT": 72.6
+      }
+    ]
+  }]
+}
