@@ -15,9 +15,9 @@ public class Hooks extends BaseUtil {
         System.out.println("Opening the browser : Chrome");
 
         if(OSDetector().equals("Mac"))
-            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver79-0-3945mac");
+            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver_87.0.4280.88_mac");
         else if(OSDetector().equals("Windows"))
-            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver80-0-3987-106win.exe");
+            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver_87.0.4280.88_win.exe");
 
         driver = new ChromeDriver();
         driver.manage().window().setSize(new Dimension(1500, 1000)); //размер окна

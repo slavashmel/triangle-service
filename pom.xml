@@ -44,7 +44,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>CpquiTestTool</projectName>
+                            <projectName>triangle-service</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
 <!--                            <inputDirectory>${project.build.directory}</inputDirectory>-->
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
@@ -87,7 +87,7 @@
 
 
     <dependencies>
-        <!-- Needed for CPQ UI API tests -->
+        <!-- Needed for API tests -->
 
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -100,7 +100,7 @@
             <version>4.1.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- Needed for CPQ UI API tests -->
+        <!-- Needed for API tests -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
