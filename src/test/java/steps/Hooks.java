@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Hooks extends BaseUtil {
 
-    @Before(order = 10)
+//    @Before(order = 10)
     public void initializeWebDriver() {
         System.out.println("Opening the browser : Chrome");
 
@@ -29,10 +29,10 @@ public class Hooks extends BaseUtil {
         randomRelationId = "relationId" + generateRandomLong(10);
         randomCustomerId = "id" + generateRandomLong(16);
         randomQuoteName = "AT-" + generateRandomLong(12) + "-Quote";
-        correlationId = "AT" + generateRandomLong(10);
+//        correlationId = "AT" + generateRandomLong(10);
     }
 
-    @After(order = 20)
+//    @After(order = 20)
     public void tearDownTest(Scenario scenario) {
         if (scenario.isFailed()) {
             //Take screenshot logic

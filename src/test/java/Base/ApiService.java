@@ -11,19 +11,19 @@ import java.util.Map;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class CpqApiService extends BaseUtil {
+public class ApiService extends BaseUtil {
     private RequestSpecBuilder builder = new RequestSpecBuilder();
     private String method;
     private String url;
 
     /**
-     * CpqApiService constructor to pass the initial settings for the following method
+     * ApiService constructor to pass the initial settings for the following method
      * @param uri
      * @param method
      */
-    public CpqApiService(String uri, String method, String apiVersion, String correlationId) {
+    public ApiService(String uri, String method, String token) {
 
-        this.url = super.plmSever + uri;    //Concatenate API url
+        this.url = super.baseURI + uri;    //Concatenate API url
         this.method = method;               //API method
 
         System.out.println("Request URL: " + this.url);
@@ -32,15 +32,16 @@ public class CpqApiService extends BaseUtil {
          * Add header Media Type with API version
          */
         //Choose Media Type according to request type
-        String mediaType = null;
-        if (this.method.equals(APIConstant.ApiMethods.GET))
-            mediaType = "Accept";
-        else if (this.method.equals(APIConstant.ApiMethods.POST))
-            mediaType = "Content-Type";
+//        String mediaType = null;
+//        if (this.method.equals(APIConstant.ApiMethods.GET))
+//            mediaType = "Accept";
+//        else if (this.method.equals(APIConstant.ApiMethods.POST))
+//            mediaType = "Content-Type";
         //ToDo надо будет избавиться от charset=ISO-8859-1 который добавляется по-умолчанию к нужному
 
-        builder.addHeader(mediaType, apiVersion);
-        builder.addHeader("xAPI-correlationID", correlationId);
+//        builder.addHeader(mediaType, apiVersion);
+        builder.addHeader("X-User", token);
+        builder.addHeader("Content-Type", "application/json");
     }
 
     /**

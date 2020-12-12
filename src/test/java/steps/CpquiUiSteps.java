@@ -6,7 +6,6 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.LoginPage;
 import pages.RoePage;
 import pojo.User;
@@ -20,7 +19,7 @@ public class CpquiUiSteps extends BaseUtil {
 
     @And("Login to ROE with")
     public void loginToROEWith(DataTable arg) {
-        driver.navigate().to(plmSever + quoteUrl);
+        driver.navigate().to(baseURI + quoteUrl);
         driver.findElement(By.className("title")).isDisplayed();
 
         List<Map<String, String>> table = arg.asMaps(String.class, String.class);

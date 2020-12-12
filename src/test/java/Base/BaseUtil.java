@@ -9,16 +9,18 @@ public class BaseUtil {
     public static WebDriverWait wait;
 
     //Server settings
-    public static String plmSever = "http://qaapp333.netcracker.com:6330";
+    public static String baseURI = "https://qa-quiz.natera.com";
 
     public static String quoteId;
     public static String quoteUrl;
+
+    //Auth
+    public static String token = "66058bd0-4783-4f97-9509-ec3f7466ffb2";
 
     //Random values
     public static String randomRelationId;
     public static String randomCustomerId;
     public static String randomQuoteName;
-    public static String correlationId;
 
     public long generateRandomLong(int count) {
         long leftLimit = (long) Math.pow(10, count-1);

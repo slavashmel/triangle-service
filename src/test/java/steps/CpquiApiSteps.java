@@ -1,7 +1,7 @@
 package steps;
 
+import Base.ApiService;
 import Base.BaseUtil;
-import Base.CpqApiService;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -11,6 +11,7 @@ import pojo.CreateQuoteBody;
 import pojo.Customer;
 import pojo.FillQuoteBody;
 import Base.APIConstant;
+import pojo.TriangleRequestBody;
 
 import java.util.HashMap;
 import java.util.List;
@@ -28,41 +29,45 @@ public class CpquiApiSteps extends BaseUtil {
 //    }
 
     public static ResponseOptions<Response> response;
+    public static TriangleRequestBody triangleRequestBody = new TriangleRequestBody();
     public static Customer customer = new Customer();
     public static CreateQuoteBody createQuoteBody = new CreateQuoteBody();
 
-    @Given("Send Create Quote request with body parameters")
-    public void createQuoteWithBodyParameters(DataTable arg) {
-        List<Map<String, String>> table = arg.asMaps(String.class, String.class);
+    @Given("Send Create Triangle request with parameters from table")
+    public void createTriangleWithBodyParameters(DataTable dataTable) {
+        List<Map<String, String>> table = dataTable.asMaps(String.class, String.class);
 
-        //Fill Create Quote request body
-        customer.setName("AT Alpha Computers");
-        customer.setId(randomCustomerId);
-        customer.setCategory(table.get(0).get("category"));
-        if(table.get(0).get("billingAccountCode")!=null)
-            customer.setBillingAccountCode(table.get(0).get("billingAccountCode"));
-        createQuoteBody.setNotes("Alpha Computers Store 2nd quote");
-        createQuoteBody.setScenario(table.get(0).get("scenario"));
-        createQuoteBody.setCreatedBy("AT-VIME");
-        createQuoteBody.setName(randomQuoteName);
-        createQuoteBody.setRelationId(randomRelationId);
-        createQuoteBody.setDistributionChannel(table.get(0).get("distributionChannel"));
-        createQuoteBody.setCustomer(customer);
+        //Fill request body
+        triangleRequestBody.setSeparator(table.get(0).get("separator"));
+        if(table.get(0).get("input")!=null) {
+            triangleRequestBody.setInput(table.get(0).get("input"));
+        }
 
-        CpqApiService cpqApiService = new CpqApiService(
-                "/api/tmnl/cpq/quote/",
+//        triangleRequestBody.setInput(table.get(0).get("input")));
+//        customer.setName("AT Alpha Computers");
+//        customer.setId(randomCustomerId);
+//        customer.setCategory(table.get(0).get("category"));
+//        createQuoteBody.setNotes("Alpha Computers Store 2nd quote");
+//        createQuoteBody.setScenario(table.get(0).get("scenario"));
+//        createQuoteBody.setCreatedBy("AT-VIME");
+//        createQuoteBody.setName(randomQuoteName);
+//        createQuoteBody.setRelationId(randomRelationId);
+//        createQuoteBody.setDistributionChannel(table.get(0).get("distributionChannel"));
+//        createQuoteBody.setCustomer(customer);
+
+        ApiService apiService = new ApiService(
+                "/triangle",
                 APIConstant.ApiMethods.POST,
-                APIConstant.ApiVersions.v2,
-                correlationId);
+                token);
 
-        response = cpqApiService.ExecuteWithBody(createQuoteBody);
-        cpqApiService.CheckResponseCode(response, 201);
+        response = apiService.ExecuteWithBody(triangleRequestBody);
+        apiService.CheckResponseCode(response, 200);
 
         //Store quote ID and ROE link in variables
         quoteId = response.getBody().jsonPath().get("id");
         quoteUrl = response.getBody().jsonPath().get("url");
 
-        System.out.println("Created Quote URL: " + plmSever + quoteUrl);
+        System.out.println("Created Quote URL: " + baseURI + quoteUrl);
         System.out.println("Response body is: " + response.getBody().print());
     }
 
@@ -96,35 +101,32 @@ public class CpquiApiSteps extends BaseUtil {
         queryParams.put("customerId", randomCustomerId);
         queryParams.put("relationId", randomRelationId);
 
-        CpqApiService cpqApiService = new CpqApiService(
+        ApiService apiService = new ApiService(
                 "/api/tmnl/cpq/quotes",
                 APIConstant.ApiMethods.GET,
-                APIConstant.ApiVersions.v1,
-                correlationId);
-        response = cpqApiService.ExecuteWithQueryParams(queryParams);
-        cpqApiService.CheckResponseCode(response, 200);
+                token);
+        response = apiService.ExecuteWithQueryParams(queryParams);
+        apiService.CheckResponseCode(response, 200);
     }
 
     @And("Send Complete Quote request")
     public void sendCompleteQuoteRequest() {
-        CpqApiService cpqApiService = new CpqApiService(
+        ApiService apiService = new ApiService(
                 "/api/tmnl/cpq/quote/" + quoteId + "/complete/",
                 APIConstant.ApiMethods.POST,
-                APIConstant.ApiVersions.v1,
-                correlationId);
-        response = cpqApiService.Execute();
-        cpqApiService.CheckResponseCode(response, 200);
+                token);
+        response = apiService.Execute();
+        apiService.CheckResponseCode(response, 200);
     }
 
     @And("Send Fetch Quote request")
     public void sendFetchQuoteRequest() {
-        CpqApiService cpqApiService = new CpqApiService(
+        ApiService apiService = new ApiService(
                 "/api/tmnl/cpq/quote/" + quoteId,
                 APIConstant.ApiMethods.GET,
-                APIConstant.ApiVersions.v1,
-                correlationId);
-        response = cpqApiService.Execute();
-        cpqApiService.CheckResponseCode(response, 200);
+                token);
+        response = apiService.Execute();
+        apiService.CheckResponseCode(response, 200);
     }
 
     @And("Verify Fetch Quote response values")
@@ -143,33 +145,31 @@ public class CpquiApiSteps extends BaseUtil {
         else if (ver.equals("v3"))
             apiVersion = APIConstant.ApiVersions.v3;
 
-        CpqApiService cpqApiService = new CpqApiService(
+        ApiService apiService = new ApiService(
                 "/api/tmnl/cpq/quote/" + quoteId + "/accept/",
                 APIConstant.ApiMethods.POST,
-                apiVersion,
-                correlationId);
-        response = cpqApiService.Execute();
+                token);
+        response = apiService.Execute();
 
-        cpqApiService.CheckResponseCode(response, 200);
+        apiService.CheckResponseCode(response, 200);
     }
 
     @And("Send Clone Quote request")
     public void sendCloneQuoteRequest() {
         createQuoteBody.setSource(quoteId);
 
-        CpqApiService cpqApiService = new CpqApiService(
+        ApiService apiService = new ApiService(
                 "/api/tmnl/cpq/quote/",
                 APIConstant.ApiMethods.POST,
-                APIConstant.ApiVersions.v2,
-                correlationId);
-        response = cpqApiService.ExecuteWithBody(createQuoteBody);
-        cpqApiService.CheckResponseCode(response, 201);
+                token);
+        response = apiService.ExecuteWithBody(createQuoteBody);
+        apiService.CheckResponseCode(response, 201);
 
 
         quoteId = response.getBody().jsonPath().get("id");      //Store created quote ID
         quoteUrl = response.getBody().jsonPath().get("url");    //Store link to ROE Quote
 
-        System.out.println("Clonned Quote URL: " + plmSever + quoteUrl);
+        System.out.println("Clonned Quote URL: " + baseURI + quoteUrl);
     }
 
     @And("Send Fill Quote request with data for {string} server")
@@ -188,13 +188,12 @@ public class CpquiApiSteps extends BaseUtil {
             fillQuoteBody.setAddonId("9150776412751705574");
         }
 
-        CpqApiService cpqApiService = new CpqApiService(
+        ApiService apiService = new ApiService(
                 "/api/tmnl/cpq/quote/fill/",
                 APIConstant.ApiMethods.POST,
-                APIConstant.ApiVersions.v1,
-                correlationId);
+                token);
 
-        response = cpqApiService.ExecuteWithBody(fillQuoteBody);
-        cpqApiService.CheckResponseCode(response, 200);
+        response = apiService.ExecuteWithBody(fillQuoteBody);
+        apiService.CheckResponseCode(response, 200);
     }
 }
