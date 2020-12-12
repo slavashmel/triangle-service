@@ -18,34 +18,23 @@ public class ApiService extends BaseUtil {
 
     /**
      * ApiService constructor to pass the initial settings for the following method
+     *
      * @param uri
      * @param method
      */
     public ApiService(String uri, String method, String token) {
+        this.url = super.baseURI + uri;
+        this.method = method;
 
-        this.url = super.baseURI + uri;    //Concatenate API url
-        this.method = method;               //API method
+        System.out.println("Method: " + method + ", URL: " + this.url);
 
-        System.out.println("Request URL: " + this.url);
-
-        /**
-         * Add header Media Type with API version
-         */
-        //Choose Media Type according to request type
-//        String mediaType = null;
-//        if (this.method.equals(APIConstant.ApiMethods.GET))
-//            mediaType = "Accept";
-//        else if (this.method.equals(APIConstant.ApiMethods.POST))
-//            mediaType = "Content-Type";
-        //ToDo надо будет избавиться от charset=ISO-8859-1 который добавляется по-умолчанию к нужному
-
-//        builder.addHeader(mediaType, apiVersion);
         builder.addHeader("X-User", token);
         builder.addHeader("Content-Type", "application/json");
     }
 
     /**
      * ExecuteAPI to execute the API for GET/POST/DELETE
+     *
      * @return ResponseOptions<Response>
      */
     private ResponseOptions<Response> ExecuteAPI() {
@@ -57,11 +46,14 @@ public class ApiService extends BaseUtil {
             return request.post(this.url);
         else if (this.method.equalsIgnoreCase(APIConstant.ApiMethods.GET))
             return request.get(this.url);
+        else if (this.method.equalsIgnoreCase(APIConstant.ApiMethods.DELETE))
+            return request.delete(this.url);
         return null;
     }
 
     /**
      * Execute API with query params being passed as the input of it
+     *
      * @param queryPath
      * @return Response
      */
@@ -72,6 +64,7 @@ public class ApiService extends BaseUtil {
 
     /**
      * Execute without any parameters
+     *
      * @return
      */
     public ResponseOptions<Response> Execute() {
@@ -80,6 +73,7 @@ public class ApiService extends BaseUtil {
 
     /**
      * ExecuteWithPathParams
+     *
      * @param pathParams
      * @return
      */
@@ -90,6 +84,7 @@ public class ApiService extends BaseUtil {
 
     /**
      * ExecuteWithPathParamsAndBody
+     *
      * @param pathParams
      * @param body
      * @return
@@ -102,6 +97,7 @@ public class ApiService extends BaseUtil {
 
     /**
      * ExecuteWithBody
+     *
      * @param body
      * @return
      */
@@ -111,9 +107,9 @@ public class ApiService extends BaseUtil {
     }
 
     public void CheckResponseCode(ResponseOptions<Response> response, int expectedCode) {
-        if(response.getStatusCode() > 299) {
+        if (response.getStatusCode() > 299) {
             System.out.println(response.getBody().print());
         }
-        assertThat(response.getStatusCode(), equalTo(expectedCode)  );
+        assertThat(response.getStatusCode(), equalTo(expectedCode));
     }
 }

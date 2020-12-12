@@ -27,4 +27,9 @@ public class TriangleRequestBody {
     public void setInput(String input) {
         this.input = input;
     }
+
+    @Override
+    public String toString() {
+        return "{\"separator\": \"" + separator + "\", \"input\": \"" + input + "\"}";
+    }
 }
