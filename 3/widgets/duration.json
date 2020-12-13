@@ -1,0 +1,91 @@
+[ {
+  "uid" : "51c8e01a49bca8ea",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888244704,
+    "stop" : 1607888245863,
+    "duration" : 1159
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "43f36223d2cc70f3",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888245878,
+    "stop" : 1607888246979,
+    "duration" : 1101
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f96b002da9758c3e",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888249745,
+    "stop" : 1607888250439,
+    "duration" : 694
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1f5c93e6e9cd578",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888247696,
+    "stop" : 1607888248398,
+    "duration" : 702
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c846b1668b083ae",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888251218,
+    "stop" : 1607888252241,
+    "duration" : 1023
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c0d0de852fbd22e9",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888248400,
+    "stop" : 1607888249743,
+    "duration" : 1343
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a733ce2c83be081",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888240087,
+    "stop" : 1607888244653,
+    "duration" : 4566
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1211e75d634be39c",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888246981,
+    "stop" : 1607888247694,
+    "duration" : 713
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eb0661ee834d006b",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888250443,
+    "stop" : 1607888251182,
+    "duration" : 739
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
