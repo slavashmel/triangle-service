@@ -1,0 +1,182 @@
+{
+  "dabe391bf1143c206ca0d1706d1347cd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b75f87fca57a3e21",
+      "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/b75f87fca57a3e21",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607886719790,
+        "stop" : 1607886720150,
+        "duration" : 360
+      }
+    } ]
+  },
+  "1a8315e92510a43e94093025ed679993" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "93580a126fa8b22a",
+      "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/93580a126fa8b22a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607886718804,
+        "stop" : 1607886719449,
+        "duration" : 645
+      }
+    } ]
+  },
+  "50495e0a1253a91423cb2eb21db300ec" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c1e50dd2bff9ee06",
+      "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/c1e50dd2bff9ee06",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607886718459,
+        "stop" : 1607886718801,
+        "duration" : 342
+      }
+    } ]
+  },
+  "5b7c45621e54e20f8219f8782ff95735" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3cb2946bb6acd573",
+      "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/3cb2946bb6acd573",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607886712629,
+        "stop" : 1607886716973,
+        "duration" : 4344
+      }
+    } ]
+  },
+  "4671f94f33250c38e3858b962fa5aea0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "749c59862bbad4ae",
+      "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/749c59862bbad4ae",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607886720159,
+        "stop" : 1607886720632,
+        "duration" : 473
+      }
+    } ]
+  },
+  "bcd6979755f80eed0d0a5c7cab145f8e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ee1b1751e027ce8",
+      "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/ee1b1751e027ce8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607886717612,
+        "stop" : 1607886718137,
+        "duration" : 525
+      }
+    } ]
+  },
+  "5f4d29ff2d745dc043405d4fe73e19bc" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ebc120bb81d41a53",
+      "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/ebc120bb81d41a53",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607886717026,
+        "stop" : 1607886717599,
+        "duration" : 573
+      }
+    } ]
+  },
+  "5a4fb1afbf2471e2b1f30bc4fea00fbd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a8fccbf990e25a8c",
+      "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/a8fccbf990e25a8c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607886718140,
+        "stop" : 1607886718456,
+        "duration" : 316
+      }
+    } ]
+  },
+  "c43849422f69059bf10829fbaa10059" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4cbe11f867f6fed8",
+      "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/4cbe11f867f6fed8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607886719454,
+        "stop" : 1607886719787,
+        "duration" : 333
+      }
+    } ]
+  }
+}
