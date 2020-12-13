@@ -1,0 +1,147 @@
+{
+  "uid" : "270568689a783c00",
+  "name" : "Runs Cucumber Scenarios",
+  "fullName" : "io.cucumber.testng.AbstractTestNGCucumberTests.runScenario",
+  "historyId" : "50495e0a1253a91423cb2eb21db300ec",
+  "time" : {
+    "start" : 1607890617045,
+    "stop" : 1607890617764,
+    "duration" : 719
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpClass",
+    "time" : {
+      "start" : 1607890609053,
+      "stop" : 1607890609297,
+      "duration" : 244
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1607890621536,
+      "stop" : 1607890621706,
+      "duration" : 170
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "runner.TestRunner"
+  }, {
+    "name" : "testClass",
+    "value" : "runner.TestRunner"
+  }, {
+    "name" : "testMethod",
+    "value" : "runScenario"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "runner.TestRunner"
+  }, {
+    "name" : "host",
+    "value" : "fv-az29-450"
+  }, {
+    "name" : "thread",
+    "value" : "4037@fv-az29-450.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "\"Create triangle | missed separator\""
+  }, {
+    "name" : "arg1",
+    "value" : "\"Add triangle\""
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "714afe418e9d2399",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/5//#testresult/714afe418e9d2399",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607889953687,
+          "stop" : 1607889954395,
+          "duration" : 708
+        }
+      }, {
+        "uid" : "2c8fe637b3e91109",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/4//#testresult/2c8fe637b3e91109",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607888951650,
+          "stop" : 1607888952327,
+          "duration" : 677
+        }
+      }, {
+        "uid" : "1f5c93e6e9cd578",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/3//#testresult/1f5c93e6e9cd578",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607888247696,
+          "stop" : 1607888248398,
+          "duration" : 702
+        }
+      }, {
+        "uid" : "c1e50dd2bff9ee06",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/c1e50dd2bff9ee06",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607886718459,
+          "stop" : 1607886718801,
+          "duration" : 342
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "270568689a783c00.json",
+  "parameterValues" : [ "\"Create triangle | missed separator\"", "\"Add triangle\"" ]
+}

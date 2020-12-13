@@ -1,0 +1,126 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "runner.TestRunner",
+    "children" : [ {
+      "name" : "runScenario",
+      "uid" : "df4c4da3c695a40d",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607890609605,
+        "stop" : 1607890613875,
+        "duration" : 4270
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create a valid triangle\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "f72f48887e3c0421",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607890613930,
+        "stop" : 1607890615126,
+        "duration" : 1196
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | check default separator\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "a1f2bd5b84d5ac46",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607890615136,
+        "stop" : 1607890616287,
+        "duration" : 1151
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | wrong endpoint\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "90ad5b286e41624",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607890616294,
+        "stop" : 1607890617036,
+        "duration" : 742
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | wrong token\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "270568689a783c00",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607890617045,
+        "stop" : 1607890617764,
+        "duration" : 719
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | missed separator\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "e718e64503669c95",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607890617766,
+        "stop" : 1607890618802,
+        "duration" : 1036
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | separator doesn't matches separator in input\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "66e6cdb3d30eccf",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607890618804,
+        "stop" : 1607890619711,
+        "duration" : 907
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | missed input\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "304a9edf84d96086",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607890619713,
+        "stop" : 1607890620481,
+        "duration" : 768
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | missed one triangle side\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "9a9df531030a78f",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1607890620519,
+        "stop" : 1607890621535,
+        "duration" : 1016
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle and Get it\"", "\"Get triangle\"" ]
+    } ],
+    "uid" : "runner.TestRunner"
+  } ],
+  "name" : "packages"
+}

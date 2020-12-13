@@ -1,0 +1,91 @@
+[ {
+  "uid" : "f72f48887e3c0421",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607890613930,
+    "stop" : 1607890615126,
+    "duration" : 1196
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "df4c4da3c695a40d",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607890609605,
+    "stop" : 1607890613875,
+    "duration" : 4270
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9a9df531030a78f",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607890620519,
+    "stop" : 1607890621535,
+    "duration" : 1016
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a1f2bd5b84d5ac46",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607890615136,
+    "stop" : 1607890616287,
+    "duration" : 1151
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "90ad5b286e41624",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607890616294,
+    "stop" : 1607890617036,
+    "duration" : 742
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "270568689a783c00",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607890617045,
+    "stop" : 1607890617764,
+    "duration" : 719
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "66e6cdb3d30eccf",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607890618804,
+    "stop" : 1607890619711,
+    "duration" : 907
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e718e64503669c95",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607890617766,
+    "stop" : 1607890618802,
+    "duration" : 1036
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "304a9edf84d96086",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607890619713,
+    "stop" : 1607890620481,
+    "duration" : 768
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
