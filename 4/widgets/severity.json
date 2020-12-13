@@ -1,0 +1,91 @@
+[ {
+  "uid" : "fc705ed06c7e4fc1",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888950970,
+    "stop" : 1607888951648,
+    "duration" : 678
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2b343fe77a4eb6e5",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888953583,
+    "stop" : 1607888954283,
+    "duration" : 700
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a7f7ab5b74978729",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888944188,
+    "stop" : 1607888948673,
+    "duration" : 4485
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "15d4f85e9a9b64e4",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888949891,
+    "stop" : 1607888950968,
+    "duration" : 1077
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "20c9a7f855de4c23",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888955090,
+    "stop" : 1607888956104,
+    "duration" : 1014
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "98bcf135de129d2b",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888952329,
+    "stop" : 1607888953579,
+    "duration" : 1250
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5e03044f55cafd02",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888954284,
+    "stop" : 1607888955050,
+    "duration" : 766
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2c8fe637b3e91109",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888951650,
+    "stop" : 1607888952327,
+    "duration" : 677
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "695504f956157304",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1607888948731,
+    "stop" : 1607888949875,
+    "duration" : 1144
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
