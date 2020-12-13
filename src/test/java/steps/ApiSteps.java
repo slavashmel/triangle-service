@@ -22,8 +22,8 @@ public class ApiSteps extends BaseUtil {
     public static ResponseOptions<Response> response;
     public static TriangleRequestBody triangleRequestBody = new TriangleRequestBody();
 
-    @Given("Create Triangle with parameters from table")
-    public void createTriangleWithBodyParameters(DataTable dataTable) {
+    @Given("^Create Triangle with parameters from table and check response code \"([^\"]*)\"$")
+    public void createTriangleWithBodyParameters(final int responseCode, DataTable dataTable) {
         List<Map<String, String>> table = dataTable.asMaps(String.class, String.class);
 
         //Fill request body
@@ -31,24 +31,18 @@ public class ApiSteps extends BaseUtil {
         if(table.get(0).get("input")!=null) {triangleRequestBody.setInput(table.get(0).get("input"));}
         System.out.println("Request body: " + triangleRequestBody);
 
-        ApiService apiService = new ApiService(
-                "/triangle",
-                APIConstant.ApiMethods.POST,
-                token);
+        ApiService apiService = new ApiService("/triangle", table.get(0).get("method"), table.get(0).get("token"));
 
         response = apiService.ExecuteWithBody(triangleRequestBody);
-        apiService.CheckResponseCode(response, 200);
+        apiService.CheckResponseCode(response, responseCode);
 
-        triangleId = response.getBody().jsonPath().get("id");
-        firstSide = response.getBody().jsonPath().get("firstSide");
-        secondSide = response.getBody().jsonPath().get("secondSide");
-        thirdSide = response.getBody().jsonPath().get("thirdSide");
+        var triangleResponse = response.getBody().as(TriangleResponseBody.class);
 
         System.out.println("Response body: " + response.getBody().print());
-        System.out.println("triangleId: " + triangleId);
-        System.out.println("firstSide: " + firstSide);
-        System.out.println("secondSide: " + secondSide);
-        System.out.println("thirdSide: " + thirdSide);
+        System.out.println("triangleId: " + triangleResponse.getId());
+        System.out.println("firstSide: " + triangleResponse.getFirstSide());
+        System.out.println("secondSide: " + triangleResponse.getSecondSide());
+        System.out.println("thirdSide: " + triangleResponse.getThirdSide());
     }
 
     @And("^delete triangle with id \"([^\"]*)\"$")

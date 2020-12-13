@@ -1,7 +1,7 @@
 Feature: Triangle Service basic tests
 
   Scenario: Create triangle | POST | /triangle | 200
-    Given Create Triangle with parameters from table
+    Given Create Triangle with parameters from table and check response code "200"
       | separator | input | method | token                                |
       | ;         | 3;4;5 | POST   | 66058bd0-4783-4f97-9509-ec3f7466ffb2 |
     And delete all triangles

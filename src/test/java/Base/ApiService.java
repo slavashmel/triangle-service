@@ -107,6 +107,7 @@ public class ApiService extends BaseUtil {
     }
 
     public void CheckResponseCode(ResponseOptions<Response> response, int expectedCode) {
+        System.out.println("Response code: " + response.getStatusCode());
         if (response.getStatusCode() > 299) {
             System.out.println(response.getBody().print());
         }
