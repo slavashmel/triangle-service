@@ -17,7 +17,7 @@ public class UiSteps extends BaseUtil {
 
     @And("Login to ROE with")
     public void loginToROEWith(DataTable arg) {
-        driver.navigate().to(baseURI + firstSide);
+        driver.navigate().to(baseURI + "/path");
         driver.findElement(By.className("title")).isDisplayed();
 
         List<Map<String, String>> table = arg.asMaps(String.class, String.class);
@@ -34,7 +34,7 @@ public class UiSteps extends BaseUtil {
 
         ElementsService.waitVisibilityOfElement(RoePage.favoritesLocator);
         Assert.assertEquals("Page is not loaded.", true, driver.findElement(RoePage.summaryAreaTotals).isDisplayed());
-        System.out.println("Quote page is loaded");
+        System.out.println("Page is loaded");
     }
 
     @And("Add Subscription from Favorites with name {string}")

@@ -1,0 +1,8 @@
+{
+  "timestamp": 1607859365817,
+  "status": 422,
+  "error": "Unprocessable Entity",
+  "exception": "com.natera.test.triangle.exception.UnprocessableDataException",
+  "message": "Cannot process input",
+  "path": "/triangle"
+}

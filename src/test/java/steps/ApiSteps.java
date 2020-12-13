@@ -21,8 +21,10 @@ public class ApiSteps extends BaseUtil {
 
     public static ResponseOptions<Response> response;
     public TriangleRequestBody triangleRequestBody = new TriangleRequestBody();
+    public TriangleResponseBody triangle = null;
+    public String triangleId = null;
 
-    @Given("^Send (POST|GET|DELETE) request to endpoint \"([^\"]*)\" with parameters from table and check that response code is \"([^\"]*)\"$")
+    @Given("^Send (POST) request to endpoint \"([^\"]*)\" with parameters from table and check that response code is \"([^\"]*)\"$")
     public void createTriangleWithBodyParameters(final String method, final String endpoint, final int responseCode, DataTable dataTable) {
         List<Map<String, String>> table = dataTable.asMaps(String.class, String.class);
 
@@ -42,8 +44,26 @@ public class ApiSteps extends BaseUtil {
         apiService.CheckResponseCode(response, responseCode);
         System.out.println("Response body: " + response.getBody().asString());
 
-        if (response.getStatusCode() < 299)
-            System.out.println(response.getBody().as(TriangleResponseBody.class));
+        if (response.getStatusCode() < 299) {
+            triangle = response.getBody().as(TriangleResponseBody.class);
+            triangleId = triangle.getId();
+            System.out.println(triangle);
+        }
+    }
+
+    @Given("^Send (GET) request to endpoint \"([^\"]*)\" and check that response code is \"([^\"]*)\"$")
+    public void getTriangleWithBodyParameters(final String method, final String endpoint, final int responseCode) {
+        ApiService apiService = new ApiService(endpoint + triangleId, ApiConstant.ApiMethods.GET, token);
+
+        response = apiService.Execute();
+        apiService.CheckResponseCode(response, responseCode);
+        System.out.println("Response body: " + response.getBody().asString());
+
+        if (response.getStatusCode() < 299) {
+            triangle = response.getBody().as(TriangleResponseBody.class);
+            triangleId = triangle.getId();
+            System.out.println(triangle);
+        }
     }
 
     @And("^delete triangle with id \"([^\"]*)\"$")
@@ -84,19 +104,32 @@ public class ApiSteps extends BaseUtil {
         assertThat(responseJson, matchesJsonSchemaInClasspath(expectedJson)); //Compare JSON schema with template
     }
 
-    @And("Send Search Quote request")
-    public void sendSearchQuoteRequest() {
+    @And("Send GET request with query params")
+    public void getWithQueryParams() {
         System.out.println("Send Search Quote request");
 
         Map<String, String> queryParams = new HashMap<>();
-        queryParams.put("customerId", randomCustomerId);
-        queryParams.put("relationId", randomRelationId);
+        queryParams.put("param1", "paramValue1");
+        queryParams.put("param2", "paramValue2");
 
         ApiService apiService = new ApiService(
-                "/api/tmnl/cpq/quotes",
+                "/triangle",
                 ApiConstant.ApiMethods.GET,
                 token);
         response = apiService.ExecuteWithQueryParams(queryParams);
         apiService.CheckResponseCode(response, 200);
+    }
+
+    @And("Check that response contains parameter from table")
+    public void checkThatResponseContainsParameterFromTable(final DataTable dataTable) {
+        List<List<String>> table = dataTable.asLists();
+
+        String key = table.get(0).get(0);
+        String value = table.get(0).get(1);
+
+        System.out.println(key + value);
+
+//        @TODO finish getting attribute
+
     }
 }
