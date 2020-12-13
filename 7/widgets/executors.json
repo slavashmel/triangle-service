@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://slavashmel.github.io/triangle-service",
+  "buildOrder" : 7,
+  "buildName" : "GitHub Actions Run #419353811",
+  "buildUrl" : "https://github.com/slavashmel/triangle-service/actions/runs/419353811",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://slavashmel.github.io/triangle-service/7/"
+} ]

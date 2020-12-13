@@ -1,0 +1,130 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az76-468",
+    "children" : [ {
+      "name" : "4334@fv-az76-468.main(1)",
+      "children" : [ {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "efa364c99afaacc9",
+        "parentUid" : "415a89262688ef5592a8feab6d4c6e7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607891815704,
+          "stop" : 1607891816427,
+          "duration" : 723
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Create triangle | separator doesn't matches separator in input\"", "\"Add triangle\"" ]
+      }, {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "bed631ec2b2a9c2c",
+        "parentUid" : "415a89262688ef5592a8feab6d4c6e7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607891816438,
+          "stop" : 1607891816759,
+          "duration" : 321
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Create triangle | missed input\"", "\"Add triangle\"" ]
+      }, {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "b425ee3744fef6a3",
+        "parentUid" : "415a89262688ef5592a8feab6d4c6e7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607891813948,
+          "stop" : 1607891814546,
+          "duration" : 598
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Create triangle | check default separator\"", "\"Add triangle\"" ]
+      }, {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "1f1be50ced0fa4bf",
+        "parentUid" : "415a89262688ef5592a8feab6d4c6e7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607891814559,
+          "stop" : 1607891815107,
+          "duration" : 548
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Create triangle | wrong endpoint\"", "\"Add triangle\"" ]
+      }, {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "90a08413fc58685",
+        "parentUid" : "415a89262688ef5592a8feab6d4c6e7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607891816761,
+          "stop" : 1607891817106,
+          "duration" : 345
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Create triangle | missed one triangle side\"", "\"Add triangle\"" ]
+      }, {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "a0d9bb81ece1c4f8",
+        "parentUid" : "415a89262688ef5592a8feab6d4c6e7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607891815110,
+          "stop" : 1607891815423,
+          "duration" : 313
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Create triangle | wrong token\"", "\"Add triangle\"" ]
+      }, {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "98de9535270cca67",
+        "parentUid" : "415a89262688ef5592a8feab6d4c6e7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607891815426,
+          "stop" : 1607891815702,
+          "duration" : 276
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Create triangle | missed separator\"", "\"Add triangle\"" ]
+      }, {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "4f9a8265e0cfc609",
+        "parentUid" : "415a89262688ef5592a8feab6d4c6e7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607891809969,
+          "stop" : 1607891813897,
+          "duration" : 3928
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Create a valid triangle\"", "\"Add triangle\"" ]
+      }, {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "7d6a012517fe36e7",
+        "parentUid" : "415a89262688ef5592a8feab6d4c6e7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607891817118,
+          "stop" : 1607891817562,
+          "duration" : 444
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Create triangle and Get it\"", "\"Get triangle\"" ]
+      } ],
+      "uid" : "415a89262688ef5592a8feab6d4c6e7b"
+    } ],
+    "uid" : "ce79e97b4c1b7b399ab234576ce53853"
+  } ],
+  "name" : "timeline"
+}
