@@ -9,11 +9,6 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Your name'
-        required: true
-        default: 'Ilon Musk'
 
 jobs:
   autotests:
