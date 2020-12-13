@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: mvn dependency:go-offline compile compiler:testCompile
 
-      - name: Run Test
+      - name: RUN TESTS | Triangle Service
         if: always()
         run: mvn clean test -fae
         continue-on-error: true
