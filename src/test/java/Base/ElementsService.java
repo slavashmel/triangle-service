@@ -8,7 +8,7 @@ import pages.RoePage;
  * CPQ UI service methods
  */
 
-public class CpqElementService {
+public class ElementsService {
 
     public static void waitPageLoading() {
         BaseUtil.wait.until(ExpectedConditions.visibilityOfElementLocated(RoePage.ncLoadingImage));

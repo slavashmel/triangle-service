@@ -47,4 +47,12 @@ public class TriangleResponseBody {
     public void setThirdSide(String thirdSide) {
         this.thirdSide = thirdSide;
     }
+
+    @Override
+    public String toString() {
+        return "id: " + id +
+                "\nfirstSide: " + firstSide +
+                "\nsecondSide: " + secondSide +
+                "\nthirdSide='" + thirdSide;
+    }
 }

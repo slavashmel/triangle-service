@@ -42,11 +42,11 @@ public class ApiService extends BaseUtil {
         RequestSpecification request = RestAssured.given();
         request.spec(requestSpecification);
 
-        if (this.method.equalsIgnoreCase(APIConstant.ApiMethods.POST))
+        if (this.method.equalsIgnoreCase(ApiConstant.ApiMethods.POST))
             return request.post(this.url);
-        else if (this.method.equalsIgnoreCase(APIConstant.ApiMethods.GET))
+        else if (this.method.equalsIgnoreCase(ApiConstant.ApiMethods.GET))
             return request.get(this.url);
-        else if (this.method.equalsIgnoreCase(APIConstant.ApiMethods.DELETE))
+        else if (this.method.equalsIgnoreCase(ApiConstant.ApiMethods.DELETE))
             return request.delete(this.url);
         return null;
     }

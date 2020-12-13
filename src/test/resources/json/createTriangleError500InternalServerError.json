@@ -1,0 +1,8 @@
+{
+  "timestamp": 1607858907408,
+  "status": 500,
+  "error": "Internal Server Error",
+  "exception": "java.lang.NullPointerException",
+  "message": "No message available",
+  "path": "/triangle"
+}

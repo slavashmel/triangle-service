@@ -8,48 +8,49 @@ import io.cucumber.java.en.Given;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseOptions;
 import pojo.*;
-import Base.APIConstant;
+import Base.ApiConstant;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+
 public class ApiSteps extends BaseUtil {
 
     public static ResponseOptions<Response> response;
-    public static TriangleRequestBody triangleRequestBody = new TriangleRequestBody();
+    public TriangleRequestBody triangleRequestBody = new TriangleRequestBody();
 
-    @Given("^Create Triangle with parameters from table and check response code \"([^\"]*)\"$")
-    public void createTriangleWithBodyParameters(final int responseCode, DataTable dataTable) {
+    @Given("^Send (POST|GET|DELETE) request to endpoint \"([^\"]*)\" with parameters from table and check that response code is \"([^\"]*)\"$")
+    public void createTriangleWithBodyParameters(final String method, final String endpoint, final int responseCode, DataTable dataTable) {
         List<Map<String, String>> table = dataTable.asMaps(String.class, String.class);
 
         //Fill request body
-        triangleRequestBody.setSeparator(table.get(0).get("separator"));
-        if(table.get(0).get("input")!=null) {triangleRequestBody.setInput(table.get(0).get("input"));}
-        System.out.println("Request body: " + triangleRequestBody);
+        if (table.get(0).get("separator") != null) {
+            triangleRequestBody.setSeparator(table.get(0).get("separator"));
+        }
+        if (table.get(0).get("input") != null) {
+            triangleRequestBody.setInput(table.get(0).get("input"));
+        }
+        System.out.println("Request body: " + triangleRequestBody.asJson());
+        System.out.println(triangleRequestBody);
 
-        ApiService apiService = new ApiService("/triangle", table.get(0).get("method"), table.get(0).get("token"));
+        ApiService apiService = new ApiService(endpoint, method, table.get(0).get("token"));
 
         response = apiService.ExecuteWithBody(triangleRequestBody);
         apiService.CheckResponseCode(response, responseCode);
+        System.out.println("Response body: " + response.getBody().asString());
 
-        var triangleResponse = response.getBody().as(TriangleResponseBody.class);
-
-        System.out.println("Response body: " + response.getBody().print());
-        System.out.println("triangleId: " + triangleResponse.getId());
-        System.out.println("firstSide: " + triangleResponse.getFirstSide());
-        System.out.println("secondSide: " + triangleResponse.getSecondSide());
-        System.out.println("thirdSide: " + triangleResponse.getThirdSide());
+        if (response.getStatusCode() < 299)
+            System.out.println(response.getBody().as(TriangleResponseBody.class));
     }
 
     @And("^delete triangle with id \"([^\"]*)\"$")
     public void deleteTriangle(String triangleId) {
         ApiService apiService = new ApiService(
                 "/triangle/" + triangleId,
-                APIConstant.ApiMethods.DELETE,
+                ApiConstant.ApiMethods.DELETE,
                 token);
 
         response = apiService.Execute();
@@ -60,7 +61,7 @@ public class ApiSteps extends BaseUtil {
     public void deleteAllTriangles() {
         ApiService apiService = new ApiService(
                 "/triangle/all",
-                APIConstant.ApiMethods.GET,
+                ApiConstant.ApiMethods.GET,
                 token);
 
         response = apiService.ExecuteWithBody(triangleRequestBody);
@@ -72,25 +73,15 @@ public class ApiSteps extends BaseUtil {
     }
 
     /**
+     * @param jsonName
      * @TODO add verification of parameters
-     * @param requestScenario
      */
-    @And("Validate JSON schema for {string} response")
-    public void validateJSONSchemaForResponse(String requestScenario) {
-        //Choose schema file according to scenario
-        var schema = "";
-        if(requestScenario.equalsIgnoreCase("Create Quote"))
-            schema = "json/CreateQuoteResponseExample.json";
-        else if(requestScenario.equalsIgnoreCase("Search Quote"))
-            schema = "json/SearchQuoteResponseExample.json";
-        else if(requestScenario.equalsIgnoreCase("Fetch Quote"))
-            schema = "json/FetchQuoteResponseExample.json";
-        else if(requestScenario.equalsIgnoreCase("Accept Quote"))
-            schema = "json/AcceptQuoteResponseExampleV3.3.json"; //Will not work on API v1 due to in v1 response body is empty
+    @And("Check that JSON schema of response matches {string} standard")
+    public void validateJSONSchemaForResponse(String jsonName) {
+        var expectedJson = "json/" + jsonName + ".json";
+        var responseJson = response.getBody().asString();   //returns the body as string
 
-        var responseBody = response.getBody().asString();   //returns the body as string
-
-        assertThat(responseBody, matchesJsonSchemaInClasspath(schema)); //Compare JSON schema with template
+        assertThat(responseJson, matchesJsonSchemaInClasspath(expectedJson)); //Compare JSON schema with template
     }
 
     @And("Send Search Quote request")
@@ -103,7 +94,7 @@ public class ApiSteps extends BaseUtil {
 
         ApiService apiService = new ApiService(
                 "/api/tmnl/cpq/quotes",
-                APIConstant.ApiMethods.GET,
+                ApiConstant.ApiMethods.GET,
                 token);
         response = apiService.ExecuteWithQueryParams(queryParams);
         apiService.CheckResponseCode(response, 200);

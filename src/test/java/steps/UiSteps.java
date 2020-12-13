@@ -1,7 +1,7 @@
 package steps;
 
 import Base.BaseUtil;
-import Base.CpqElementService;
+import Base.ElementsService;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import org.junit.Assert;
@@ -30,27 +30,27 @@ public class UiSteps extends BaseUtil {
         page.EnterLoginCredentials(user.getUsername(), user.getPassword());
         page.ClickLoginButton();
 
-        CpqElementService.waitPageLoading();
+        ElementsService.waitPageLoading();
 
-        CpqElementService.waitVisibilityOfElement(RoePage.favoritesLocator);
+        ElementsService.waitVisibilityOfElement(RoePage.favoritesLocator);
         Assert.assertEquals("Page is not loaded.", true, driver.findElement(RoePage.summaryAreaTotals).isDisplayed());
         System.out.println("Quote page is loaded");
     }
 
     @And("Add Subscription from Favorites with name {string}")
     public void addSubscriptionFromFavoritesWithName(String subscriptionName) {
-        CpqElementService.waitVisibilityOfElement(RoePage.favoritesLocator);
+        ElementsService.waitVisibilityOfElement(RoePage.favoritesLocator);
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        CpqElementService.clickOnElement(RoePage.subscriptionLocator(subscriptionName));
+        ElementsService.clickOnElement(RoePage.subscriptionLocator(subscriptionName));
 
-        CpqElementService.waitPageLoading();
+        ElementsService.waitPageLoading();
         try {
-            CpqElementService.waitPageLoading();
+            ElementsService.waitPageLoading();
         } catch (Exception ignored) {
 
         }
@@ -59,9 +59,9 @@ public class UiSteps extends BaseUtil {
 
     @And("Raise Quantity")
     public void raiseQuantity() {
-        CpqElementService.clickOnElement(RoePage.quantityUp);
+        ElementsService.clickOnElement(RoePage.quantityUp);
 
-        CpqElementService.applySelection();
+        ElementsService.applySelection();
 
         System.out.println("Quantity increased");
     }
@@ -70,81 +70,81 @@ public class UiSteps extends BaseUtil {
     public void addRemark(String remark) {
         driver.findElement(RoePage.remarkLocator).sendKeys(remark);
 
-        CpqElementService.applySelection();
+        ElementsService.applySelection();
 
         System.out.println("Remark with text \"" + remark + "\" is added");
     }
 
     @And("Select Work Addon {string}")
     public void selectWorkAddon(String workAddonName) {
-        CpqElementService.clickOnElement(RoePage.addonLocator(workAddonName));
+        ElementsService.clickOnElement(RoePage.addonLocator(workAddonName));
 
-        CpqElementService.applySelection();
+        ElementsService.applySelection();
         System.out.println("Work Addon \"" + workAddonName + "\" is selected");
     }
 
     @And("Change Pricing Date")
     public void changePricingDate() {
-        CpqElementService.clickOnElement(RoePage.pricingDateCalendarIcon);
+        ElementsService.clickOnElement(RoePage.pricingDateCalendarIcon);
 
-        CpqElementService.waitVisibilityOfElement(RoePage.pricingDatePrevMonth);
-        CpqElementService.clickOnElement(RoePage.pricingDatePrevMonth);
+        ElementsService.waitVisibilityOfElement(RoePage.pricingDatePrevMonth);
+        ElementsService.clickOnElement(RoePage.pricingDatePrevMonth);
 
-        CpqElementService.waitVisibilityOfElement(RoePage.pricingDateFirstDayOfSecondWeek);
-        CpqElementService.clickOnElement(RoePage.pricingDateFirstDayOfSecondWeek);
+        ElementsService.waitVisibilityOfElement(RoePage.pricingDateFirstDayOfSecondWeek);
+        ElementsService.clickOnElement(RoePage.pricingDateFirstDayOfSecondWeek);
 
-        CpqElementService.waitPageLoading();
+        ElementsService.waitPageLoading();
 
         System.out.println("Pricing Date is changed on 1 week back");
     }
 
     @And("Change Market")
     public void changeMarket() {
-        CpqElementService.clickOnElement(RoePage.marketSelector);
-        CpqElementService.clickOnElement(RoePage.marketSecondValue);
+        ElementsService.clickOnElement(RoePage.marketSelector);
+        ElementsService.clickOnElement(RoePage.marketSecondValue);
 
-        CpqElementService.waitPageLoading();
+        ElementsService.waitPageLoading();
 
         System.out.println("Market is changed to 1st available value");
     }
 
     @And("Duplicate the package")
     public void duplicateThePackage() {
-        CpqElementService.clickOnElement(RoePage.duplicatePackage);
+        ElementsService.clickOnElement(RoePage.duplicatePackage);
 
-        CpqElementService.waitPageLoading();
+        ElementsService.waitPageLoading();
 
         System.out.println("Package is cloned");
     }
 
     @And("Add device {string}")
     public void addDevice(String deviceName) {
-        CpqElementService.clickOnElement(RoePage.devicesExpander);
+        ElementsService.clickOnElement(RoePage.devicesExpander);
 
         driver.findElement(RoePage.devicesSearchField).sendKeys(deviceName);
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(RoePage.deviceToSelect(deviceName)));
-        CpqElementService.waitVisibilityOfElement(RoePage.deviceToSelect(deviceName));
+        ElementsService.waitVisibilityOfElement(RoePage.deviceToSelect(deviceName));
 
-        CpqElementService.clickOnElement(RoePage.deviceToSelect(deviceName));
+        ElementsService.clickOnElement(RoePage.deviceToSelect(deviceName));
 
-        CpqElementService.waitPageLoading();
+        ElementsService.waitPageLoading();
 
         System.out.println("Device \""  + deviceName + "\" is added");
     }
 
     @And("Select color {string}")
     public void selectColor(String deviceColor) {
-        CpqElementService.clickOnElement(RoePage.deviceColorSelector(deviceColor));
+        ElementsService.clickOnElement(RoePage.deviceColorSelector(deviceColor));
 
-        CpqElementService.waitPageLoading();
+        ElementsService.waitPageLoading();
 
         System.out.println("Color \""  + deviceColor + "\" is selected");
     }
 
     @And("Select SIM card with name {string}")
     public void selectSIMCardWithName(String simCardName) {
-        CpqElementService.clickOnElement(RoePage.simCardToSelect(simCardName));
+        ElementsService.clickOnElement(RoePage.simCardToSelect(simCardName));
 
-        CpqElementService.waitPageLoading();
+        ElementsService.waitPageLoading();
     }
 }

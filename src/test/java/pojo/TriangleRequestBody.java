@@ -11,6 +11,14 @@ public class TriangleRequestBody {
         this.separator = separator;
         this.input = input;
     }
+//
+//    public TriangleRequestBody(String separator) {
+//        this.separator = separator;
+//    }
+//
+//    public TriangleRequestBody(String input) {
+//        this.input = input;
+//    }
 
     public String getSeparator() {
         return separator;
@@ -30,6 +38,11 @@ public class TriangleRequestBody {
 
     @Override
     public String toString() {
+        return "separator: " + separator +
+                "\ninput: " + input;
+    }
+
+    public String asJson() {
         return "{\"separator\": \"" + separator + "\", \"input\": \"" + input + "\"}";
     }
 }
