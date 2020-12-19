@@ -1,0 +1,91 @@
+[ {
+  "uid" : "18d808af2d1fe99",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608414672205,
+    "stop" : 1608414672547,
+    "duration" : 342
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ed62f97152fbe248",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608414672549,
+    "stop" : 1608414673206,
+    "duration" : 657
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aef6444cd93b5474",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608414670810,
+    "stop" : 1608414671394,
+    "duration" : 584
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f23bf82b2c474b05",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608414673525,
+    "stop" : 1608414673861,
+    "duration" : 336
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "76663733831ac6b4",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608414673872,
+    "stop" : 1608414674304,
+    "duration" : 432
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e91b9910f9152c4d",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608414671405,
+    "stop" : 1608414671890,
+    "duration" : 485
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d09faabb12b9087",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608414666382,
+    "stop" : 1608414670747,
+    "duration" : 4365
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d744be396343682a",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608414671894,
+    "stop" : 1608414672203,
+    "duration" : 309
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a72e5e62362941b",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608414673208,
+    "stop" : 1608414673522,
+    "duration" : 314
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
