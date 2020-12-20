@@ -1,0 +1,101 @@
+[ {
+  "uid" : "aad04b72f7ce4f34",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608499988870,
+    "stop" : 1608499989749,
+    "duration" : 879
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9a165e3135f69c96",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608499984761,
+    "stop" : 1608499985651,
+    "duration" : 890
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "43038ba5267a6414",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608499985653,
+    "stop" : 1608499986580,
+    "duration" : 927
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "536aabf098931b8e",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608499986582,
+    "stop" : 1608499987926,
+    "duration" : 1344
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7ca9ee9ce08853e8",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608499962063,
+    "stop" : 1608499968536,
+    "duration" : 6473
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cef3f19942a51967",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608499989751,
+    "stop" : 1608499991125,
+    "duration" : 1374
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a8692ed0d85ad450",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608499957134,
+    "stop" : 1608499961963,
+    "duration" : 4829
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5771466d063f1182",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608499968614,
+    "stop" : 1608499978777,
+    "duration" : 10163
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "4682ac853640ef93",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608499987928,
+    "stop" : 1608499988863,
+    "duration" : 935
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "27d8c2674f35436a",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1608499978863,
+    "stop" : 1608499984757,
+    "duration" : 5894
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

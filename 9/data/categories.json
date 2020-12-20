@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "\nExpected: <422>\n     but: was <200>",
+      "children" : [ {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "5771466d063f1182",
+        "parentUid" : "716b79dd2bf3cef7b359816da399dcf7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1608499968614,
+          "stop" : 1608499978777,
+          "duration" : 10163
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "\"Create triangle | 11 triangles\"", "\"Add triangle\"" ]
+      } ],
+      "uid" : "716b79dd2bf3cef7b359816da399dcf7"
+    }, {
+      "name" : "\nExpected: <400>\n     but: was <500>",
+      "children" : [ {
+        "name" : "Runs Cucumber Scenarios",
+        "uid" : "4682ac853640ef93",
+        "parentUid" : "bec8979ad0ec4e529b9a9e9a33fc4d88",
+        "status" : "failed",
+        "time" : {
+          "start" : 1608499987928,
+          "stop" : 1608499988863,
+          "duration" : 935
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "\"Create triangle | missed input\"", "\"Add triangle\"" ]
+      } ],
+      "uid" : "bec8979ad0ec4e529b9a9e9a33fc4d88"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
