@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ApiSteps extends BaseUtil {
@@ -51,6 +52,13 @@ public class ApiSteps extends BaseUtil {
         }
     }
 
+    @Given("^Create (\\d+) (?:triangle|triangles) with parameters from table and check that response code is \"([^\"]*)\"$")
+    public void createManyTriangles(final int quantity, final int responseCode, DataTable dataTable) {
+        for (int i = 0; i < quantity; i++) {
+            createTriangleWithBodyParameters(ApiConstant.ApiMethods.POST, "/triangle", responseCode, dataTable);
+        }
+    }
+
     @Given("^Send (GET) request to endpoint \"([^\"]*)\" and check that response code is \"([^\"]*)\"$")
     public void getTriangleWithBodyParameters(final String method, final String endpoint, final int responseCode) {
         ApiService apiService = new ApiService(endpoint + triangleId, ApiConstant.ApiMethods.GET, token);
@@ -75,6 +83,32 @@ public class ApiSteps extends BaseUtil {
 
         response = apiService.Execute();
         apiService.CheckResponseCode(response, 200);
+    }
+
+    @And("get all triangles")
+    public void getAllTriangles() {
+        ApiService apiService = new ApiService(
+                "/triangle/all",
+                ApiConstant.ApiMethods.GET,
+                token);
+
+        response = apiService.ExecuteWithBody(triangleRequestBody);
+        apiService.CheckResponseCode(response, 200);
+        var triangles = response.getBody().as(TriangleResponseBody[].class);
+    }
+
+    @And("^check that created (\\d+) triangles$")
+    public void CalculateTrianglesQuantity(final int quantity) {
+        ApiService apiService = new ApiService(
+                "/triangle/all",
+                ApiConstant.ApiMethods.GET,
+                token);
+
+        response = apiService.ExecuteWithBody(triangleRequestBody);
+        apiService.CheckResponseCode(response, 200);
+        var triangles = response.getBody().as(TriangleResponseBody[].class);
+
+        assertThat(triangles.length, equalTo(quantity));
     }
 
     @And("delete all triangles")

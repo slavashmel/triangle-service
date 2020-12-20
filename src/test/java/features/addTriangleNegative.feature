@@ -33,9 +33,9 @@ Feature: Add triangle
     And Check that JSON schema of response matches "createTriangleError422UnprocessableEntity" standard
 
   @all @negative
-#  @TODO I'd better return code 4** with message that mandatory parameter is missed
+  #@TODO. BUG. I'd better return code 400 Bad Request or 422 with message that mandatory parameter input is missing
   Scenario: Create triangle | missed input
-    Given Send POST request to endpoint "/triangle" with parameters from table and check that response code is "500"
+    Given Send POST request to endpoint "/triangle" with parameters from table and check that response code is "400"
       | separator | token                                |
       | ;         | 66058bd0-4783-4f97-9509-ec3f7466ffb2 |
     And Check that JSON schema of response matches "createTriangleResponse" standard
