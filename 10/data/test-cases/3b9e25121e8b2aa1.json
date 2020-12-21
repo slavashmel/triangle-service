@@ -1,0 +1,120 @@
+{
+  "uid" : "3b9e25121e8b2aa1",
+  "name" : "Runs Cucumber Scenarios",
+  "fullName" : "io.cucumber.testng.AbstractTestNGCucumberTests.runScenario",
+  "historyId" : "fa6a76d089cd583f0770786c57aa2c0",
+  "time" : {
+    "start" : 1608529188604,
+    "stop" : 1608529194001,
+    "duration" : 5397
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpClass",
+    "time" : {
+      "start" : 1608529187989,
+      "stop" : 1608529188208,
+      "duration" : 219
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1608529224186,
+      "stop" : 1608529224393,
+      "duration" : 207
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "runner.TestRunner"
+  }, {
+    "name" : "testClass",
+    "value" : "runner.TestRunner"
+  }, {
+    "name" : "testMethod",
+    "value" : "runScenario"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "runner.TestRunner"
+  }, {
+    "name" : "host",
+    "value" : "fv-az21-132"
+  }, {
+    "name" : "thread",
+    "value" : "4316@fv-az21-132.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "\"Create triangle | 1 valid triangle\""
+  }, {
+    "name" : "arg1",
+    "value" : "\"Add triangle\""
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "a8692ed0d85ad450",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/9//#testresult/a8692ed0d85ad450",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608499957134,
+          "stop" : 1608499961963,
+          "duration" : 4829
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3b9e25121e8b2aa1.json",
+  "parameterValues" : [ "\"Create triangle | 1 valid triangle\"", "\"Add triangle\"" ]
+}
