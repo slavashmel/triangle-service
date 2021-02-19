@@ -1,0 +1,139 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "runner.TestRunner",
+    "children" : [ {
+      "name" : "runScenario",
+      "uid" : "35d9a087452f5925",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613728701141,
+        "stop" : 1613728706482,
+        "duration" : 5341
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | 1 valid triangle\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "63174f08f69e92c0",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613728706532,
+        "stop" : 1613728713109,
+        "duration" : 6577
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | 10 triangles\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "e3a91d0e36c5b300",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "failed",
+      "time" : {
+        "start" : 1613728713190,
+        "stop" : 1613728723566,
+        "duration" : 10376
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | 11 triangles\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "d050675bafcd750b",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613728723642,
+        "stop" : 1613728729605,
+        "duration" : 5963
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | wrong endpoint\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "bd7150e2cf80bd49",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613728729608,
+        "stop" : 1613728730523,
+        "duration" : 915
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | wrong token\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "a5de29721b1d0e1",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613728730526,
+        "stop" : 1613728731462,
+        "duration" : 936
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | missed separator\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "c6ed747b9941f538",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613728731464,
+        "stop" : 1613728732827,
+        "duration" : 1363
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | separator doesn't matches separator in input\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "15e1ec8dd7a15355",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "failed",
+      "time" : {
+        "start" : 1613728732831,
+        "stop" : 1613728733743,
+        "duration" : 912
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | missed input\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "5b295369a42dfe7a",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613728733751,
+        "stop" : 1613728734652,
+        "duration" : 901
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle | missed one triangle side\"", "\"Add triangle\"" ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "d82d15e98d455241",
+      "parentUid" : "4d4178c1d26eda77145e32921a758eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613728734725,
+        "stop" : 1613728736140,
+        "duration" : 1415
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "\"Create triangle and Get it\"", "\"Get triangle\"" ]
+    } ],
+    "uid" : "runner.TestRunner"
+  } ],
+  "name" : "packages"
+}
