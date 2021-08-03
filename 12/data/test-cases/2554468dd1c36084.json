@@ -1,0 +1,207 @@
+{
+  "uid" : "2554468dd1c36084",
+  "name" : "Runs Cucumber Scenarios",
+  "fullName" : "io.cucumber.testng.AbstractTestNGCucumberTests.runScenario",
+  "historyId" : "5a4fb1afbf2471e2b1f30bc4fea00fbd",
+  "time" : {
+    "start" : 1627996574935,
+    "stop" : 1627996574948,
+    "duration" : 13
+  },
+  "status" : "broken",
+  "statusMessage" : "qa-quiz.natera.com",
+  "statusTrace" : "java.net.UnknownHostException: qa-quiz.natera.com\n\tat java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)\n\tat java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)\n\tat java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368)\n\tat java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302)\n\tat org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)\n\tat org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)\n\tat org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)\n\tat org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)\n\tat org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\n\tat io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2054)\n\tat io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:494)\n\tat io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:451)\n\tat io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)\n\tat io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1450)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:821)\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1199)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:821)\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:151)\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1654)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:821)\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1660)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:821)\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:171)\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)\n\tat Base.ApiService.ExecuteAPI(ApiService.java:48)\n\tat Base.ApiService.ExecuteWithBody(ApiService.java:106)\n\tat steps.ApiSteps.deleteAllTriangles(ApiSteps.java:121)\n\tat ✽.delete all triangles(file:///home/runner/work/triangle-service/triangle-service/src/test/java/features/addTriangleNegative.feature:5)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpClass",
+    "time" : {
+      "start" : 1627996571255,
+      "stop" : 1627996571512,
+      "duration" : 257
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1627996575180,
+      "stop" : 1627996575594,
+      "duration" : 414
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "runner.TestRunner"
+  }, {
+    "name" : "testClass",
+    "value" : "runner.TestRunner"
+  }, {
+    "name" : "testMethod",
+    "value" : "runScenario"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "runner.TestRunner"
+  }, {
+    "name" : "host",
+    "value" : "fv-az252-173"
+  }, {
+    "name" : "thread",
+    "value" : "2911@fv-az252-173.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "\"Create triangle | wrong token\""
+  }, {
+    "name" : "arg1",
+    "value" : "\"Add triangle\""
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 10,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "bd7150e2cf80bd49",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/11//#testresult/bd7150e2cf80bd49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613728729608,
+          "stop" : 1613728730523,
+          "duration" : 915
+        }
+      }, {
+        "uid" : "3b8d02f808ece46f",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/10//#testresult/3b8d02f808ece46f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608529217509,
+          "stop" : 1608529218477,
+          "duration" : 968
+        }
+      }, {
+        "uid" : "9a165e3135f69c96",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/9//#testresult/9a165e3135f69c96",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608499984761,
+          "stop" : 1608499985651,
+          "duration" : 890
+        }
+      }, {
+        "uid" : "d744be396343682a",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/8//#testresult/d744be396343682a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608414671894,
+          "stop" : 1608414672203,
+          "duration" : 309
+        }
+      }, {
+        "uid" : "a0d9bb81ece1c4f8",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/7//#testresult/a0d9bb81ece1c4f8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607891815110,
+          "stop" : 1607891815423,
+          "duration" : 313
+        }
+      }, {
+        "uid" : "90ad5b286e41624",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/6//#testresult/90ad5b286e41624",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607890616294,
+          "stop" : 1607890617036,
+          "duration" : 742
+        }
+      }, {
+        "uid" : "c470d1bdc7ae5b4b",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/5//#testresult/c470d1bdc7ae5b4b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607889952960,
+          "stop" : 1607889953683,
+          "duration" : 723
+        }
+      }, {
+        "uid" : "fc705ed06c7e4fc1",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/4//#testresult/fc705ed06c7e4fc1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607888950970,
+          "stop" : 1607888951648,
+          "duration" : 678
+        }
+      }, {
+        "uid" : "1211e75d634be39c",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/3//#testresult/1211e75d634be39c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607888246981,
+          "stop" : 1607888247694,
+          "duration" : 713
+        }
+      }, {
+        "uid" : "a8fccbf990e25a8c",
+        "reportUrl" : "https://slavashmel.github.io/triangle-service/2//#testresult/a8fccbf990e25a8c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1607886718140,
+          "stop" : 1607886718456,
+          "duration" : 316
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2554468dd1c36084.json",
+  "parameterValues" : [ "\"Create triangle | wrong token\"", "\"Add triangle\"" ]
+}
