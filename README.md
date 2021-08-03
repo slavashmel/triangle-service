@@ -1,6 +1,6 @@
 # Triangle Service Test Framework
 
-Ad hoc test framework for testing of Triangle Service deployed on https://qa-quiz.natera.com/
+Simple test framework which I developed for testing of Triangle Service deployed on https://qa-quiz.natera.com/
 
 ## Run tests from GitHub
 To be able to Run pipeline you have to request access. Without it you may look previous runs.
